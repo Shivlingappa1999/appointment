@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Settings</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 80%;
+            max-width: 900px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-section label {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            display: inline-block;
+            color: #555;
+        }
+
+        .form-section input,
+        .form-section select,
+        .form-section button {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-section button {
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-section button:hover {
+            background-color: #74b9ff;
+        }
+
+        .form-section .input-half {
+            width: 48%;
+            margin-right: 4%;
+        }
+
+        .form-section .input-half:last-child {
+            margin-right: 0;
+        }
+
+        /* Notification Preferences Section */
+        .notification-section {
+            margin-top: 40px;
+        }
+
+        .notification-section label {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            display: inline-block;
+            color: #555;
+        }
+
+        .notification-section input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link {
+            font-size: 1rem;
+            color: #0984e3;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #74b9ff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .form-section label {
+                font-size: 0.9rem;
+            }
+
+            .form-section input,
+            .form-section button {
+                font-size: 0.9rem;
+            }
+
+            .form-section .input-half {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Doctor Settings</h1>
+
+        <!-- Personal Info Section -->
+        <div class="form-section">
+            <h2>Personal Information</h2>
+            <form action="#" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" value="Dr. John Doe" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="johndoe@example.com" required>
+
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" value="123-456-7890" required>
+
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" value="45" required>
+
+                <button type="submit">Update Personal Info</button>
+            </form>
+        </div>
+
+        <!-- Password Change Section -->
+        <div class="form-section">
+            <h2>Change Password</h2>
+            <form action="#" method="POST">
+                <label for="old-password">Old Password</label>
+                <input type="password" id="old-password" name="old-password" required>
+
+                <label for="new-password">New Password</label>
+                <input type="password" id="new-password" name="new-password" required>
+
+                <label for="confirm-password">Confirm New Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit">Change Password</button>
+            </form>
+        </div>
+
+        <!-- Working Hours Section -->
+        <div class="form-section">
+            <h2>Set Working Hours</h2>
+            <form action="#" method="POST">
+                <div class="input-half">
+                    <label for="start-time">Start Time</label>
+                    <input type="time" id="start-time" name="start-time" required>
+                </div>
+                <div class="input-half">
+                    <label for="end-time">End Time</label>
+                    <input type="time" id="end-time" name="end-time" required>
+                </div>
+
+                <button type="submit">Save Working Hours</button>
+            </form>
+        </div>
+
+        <!-- Notification Preferences Section -->
+        <div class="notification-section">
+            <h2>Notification Preferences</h2>
+            <form action="#" method="POST">
+                <label for="email-notifications">Email Notifications</label>
+                <input type="checkbox" id="email-notifications" name="email-notifications" checked>
+                <label for="sms-notifications">SMS Notifications</label>
+                <input type="checkbox" id="sms-notifications" name="sms-notifications" checked>
+                
+                <button type="submit">Update Notifications</button>
+            </form>
+        </div>
+
+        <footer>
+            <a href="doctor_dashboard.html" class="back-link">Back to Dashboard</a>
+        </footer>
+    </div>
+
+</body>
+</html>

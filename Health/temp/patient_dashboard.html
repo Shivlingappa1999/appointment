@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        p {
+            color: #555;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #0984e3;
+        }
+        
+        a:hover {
+            color: #74b9ff;
+        }
+        
+        /* Container Styles */
+        .container {
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 90%;
+            max-width: 900px;
+        }
+        
+        /* Header Styles */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        /* Overview Section */
+        .overview {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .overview .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .overview .info {
+            flex-grow: 1;
+        }
+        
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h2 {
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            margin-bottom: 8px;
+        }
+        
+        /* Sections: Appointments and Reports */
+        .sections {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .appointments, .reports {
+            flex: 1;
+        }
+        
+        .appointments table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f1f1f1;
+        }
+        
+        .status {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .status.upcoming {
+            background-color: #f39c12;
+            color: white;
+        }
+        
+        .status.confirmed {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        .reports ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .reports li {
+            margin-bottom: 10px;
+        }
+        
+        /* Action Buttons */
+        .actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        button {
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background-color: #74b9ff;
+        }
+        
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Footer Styles */
+        footer {
+            text-align: center;
+        }
+        
+        .logout-link {
+            font-size: 1rem;
+            color: #e74c3c;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .logout-link:hover {
+            color: #c0392b;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        
+            .sections {
+                flex-direction: column;
+            }
+        
+            .appointments table {
+                font-size: 0.9rem;
+            }
+        
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Patient Dashboard</h1>
+        </header>
+
+        <div class="overview">
+            <!-- Patient Profile Image and Info -->
+            <img src="\Health\Health\static\Images\profile1.jpg" alt="Patient Profile" class="profile-img">
+            <div class="info">
+                <div class="card">
+                    <h2>Welcome, Akshy Shah</h2>
+                    <p><strong>Email:</strong> akshayshay@example.com</p>
+                    <p><strong>Phone:</strong> 7694523190</p>
+                    <p><strong>Age:</strong> 28 years</p> <!-- Added Age -->
+                </div>
+            </div>
+        </div>
+
+        <div class="sections">
+            <div class="appointments">
+                <h2>Upcoming Appointments</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Doctor</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024-12-25</td>
+                            <td>Dr. Smith</td>
+                            <td>General Checkup</td>
+                            <td><span class="status upcoming">Upcoming</span></td>
+                        </tr>
+                        <tr>
+                            <td>2024-12-28</td>
+                            <td>Dr. Brown</td>
+                            <td>Blood Test</td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="reports">
+                <h2>Recent Medical Reports</h2>
+                <ul>
+                    <li><a href="blood_test_results.pdf" download>Blood Test Results (2024-12-20)</a></li>
+                    <li><a href="x_ray_image.jpg" download>X-ray Image (2024-12-18)</a></li>
+                    <li><a href="prescription.pdf" download>Prescription Details (2024-12-10)</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button><a href="update_profile.html">Update Profile</a></button>
+            <button><a href="bkap.html">Book an Appointment</a></button>
+        </div>
+
+        <footer>
+            <a href="/logout" class="logout-link">Logout</a>
+        </footer>
+    </div>
+</body>
+</html>

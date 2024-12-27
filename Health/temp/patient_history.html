@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient History</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .history-section {
+            margin-bottom: 30px;
+        }
+
+        .history-section h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .history-table th, .history-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .history-table th {
+            background-color: #f1f1f1;
+        }
+
+        .history-table td a {
+            color: #0984e3;
+            text-decoration: none;
+        }
+
+        .history-table td a:hover {
+            color: #74b9ff;
+        }
+
+        /* Card Styles for Medical Reports */
+        .report-card {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .report-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .report-card p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link {
+            font-size: 1rem;
+            color: #0984e3;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #74b9ff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .history-section {
+                margin-bottom: 20px;
+            }
+
+            .history-table th, .history-table td {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+
+            .report-card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Patient Medical History</h1>
+
+        <div class="history-section">
+            <h2>Past Appointments</h2>
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Doctor</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-12-25</td>
+                        <td>Dr. Smith</td>
+                        <td>General Checkup</td>
+                        <td><span class="status upcoming">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>2024-11-10</td>
+                        <td>Dr. Brown</td>
+                        <td>Blood Test</td>
+                        <td><span class="status confirmed">Completed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="history-section">
+            <h2>Medical Reports</h2>
+
+            <div class="report-card">
+                <h3>Blood Test Results (2024-12-20)</h3>
+                <p>Doctor: Dr. Brown</p>
+                <p><a href="blood_test_results.pdf" download>Download Blood Test Results</a></p>
+            </div>
+
+            <div class="report-card">
+                <h3>X-ray Results (2024-12-18)</h3>
+                <p>Doctor: Dr. Smith</p>
+                <p><a href="x_ray_image.jpg" download>Download X-ray Image</a></p>
+            </div>
+        </div>
+
+        <footer>
+            <a href="doctor_dashboard.html" class="back-link">Back to Dashboard</a>
+        </footer>
+    </div>
+
+</body>
+</html>

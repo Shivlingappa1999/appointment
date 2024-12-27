@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Appointment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .appointment-details {
+            margin-top: 20px;
+        }
+
+        .appointment-details h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .details-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .details-list li {
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .details-list li span {
+            font-weight: bold;
+        }
+
+        .status {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .status.upcoming {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        .status.confirmed {
+            background-color: #2ecc71;
+            color: white;
+        }
+
+        .status.cancelled {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        /* Action Button */
+        .actions {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .actions a {
+            text-decoration: none;
+            background-color: #0984e3;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .actions a:hover {
+            background-color: #74b9ff;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link {
+            font-size: 1rem;
+            color: #0984e3;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #74b9ff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .details-list li {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Appointment Details</h1>
+
+        <div class="appointment-details">
+            <h2>Appointment Information</h2>
+            <ul class="details-list">
+                <li><span>Patient Name:</span> Akshay Shah</li>
+                <li><span>Doctor:</span> Dr. Priya</li>
+                <li><span>Appointment Date:</span> 2024-12-25</li>
+                <li><span>Time:</span> 10:00 AM</li>
+                <li><span>Reason:</span> General Checkup</li>
+                <li><span>Status:</span> <span class="status confirmed">Confirmed</span></li>
+            </ul>
+        </div>
+
+        <div class="actions">
+            <a href="/cancel-appointment">Cancel Appointment</a>
+        </div>
+
+        <footer>
+            <a href="doctor_dashboard.html" class="back-link">Back to Dashboard</a>
+        </footer>
+    </div>
+
+</body>
+</html>

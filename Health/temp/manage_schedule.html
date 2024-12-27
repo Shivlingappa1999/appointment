@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Schedule</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Schedule Management Section */
+        .schedule-section {
+            margin-top: 20px;
+        }
+
+        .schedule-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .add-schedule-form {
+            margin-bottom: 20px;
+        }
+
+        .add-schedule-form label {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            display: inline-block;
+            color: #555;
+        }
+
+        .add-schedule-form input,
+        .add-schedule-form select,
+        .add-schedule-form button {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .add-schedule-form button {
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .add-schedule-form button:hover {
+            background-color: #74b9ff;
+        }
+
+        /* Existing Schedule Table */
+        .schedule-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .schedule-table th {
+            background-color: #f1f1f1;
+        }
+
+        .schedule-table .actions a {
+            text-decoration: none;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .schedule-table .actions a:hover {
+            color: #c0392b;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link {
+            font-size: 1rem;
+            color: #0984e3;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #74b9ff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .add-schedule-form label {
+                font-size: 0.9rem;
+            }
+
+            .schedule-table table {
+                font-size: 0.9rem;
+            }
+
+            .add-schedule-form input,
+            .add-schedule-form select,
+            .add-schedule-form button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Manage Schedule</h1>
+
+        <!-- Add Schedule Form -->
+        <div class="schedule-section">
+            <h2>Add New Schedule</h2>
+            <form class="add-schedule-form">
+                <label for="day">Day:</label>
+                <select id="day" name="day">
+                    <option value="monday">Monday</option>
+                    <option value="tuesday">Tuesday</option>
+                    <option value="wednesday">Wednesday</option>
+                    <option value="thursday">Thursday</option>
+                    <option value="friday">Friday</option>
+                </select>
+
+                <label for="start-time">Start Time:</label>
+                <input type="time" id="start-time" name="start-time">
+
+                <label for="end-time">End Time:</label>
+                <input type="time" id="end-time" name="end-time">
+
+                <button type="submit">Add Schedule</button>
+            </form>
+        </div>
+
+        <!-- Existing Schedule Table -->
+        <div class="schedule-table">
+            <h2>Current Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>09:00 AM</td>
+                        <td>01:00 PM</td>
+                        <td class="actions"><a href="#">Delete</a> | <a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>02:00 PM</td>
+                        <td>06:00 PM</td>
+                        <td class="actions"><a href="#">Delete</a> | <a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>10:00 AM</td>
+                        <td>02:00 PM</td>
+                        <td class="actions"><a href="#">Delete</a> | <a href="#">Edit</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            <a href="doctor_dashboard.html" class="back-link">Back to Dashboard</a>
+        </footer>
+    </div>
+
+</body>
+</html>

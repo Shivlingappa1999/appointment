@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Medical Report</title>
+    <link rel="stylesheet" href="{% static 'upload.css' %}">
+</head>
+<body>
+    <div class="upload-container">
+        <h2>Upload Medical Report</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">Upload Report:</label>
+                <input type="file" id="file" name="file"  required>
+            </div>
+            <button type="submit" class="btn upload-btn">Upload</button>
+        </form>
+        <a href="patient_dashboard.html" class="btn back-btn">Back to Dashboard</a>
+    </div>
+</body>
+</html>

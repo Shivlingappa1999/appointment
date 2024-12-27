@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation Notes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 90%;
+            max-width: 900px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .patient-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .patient-info div {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section label {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            display: inline-block;
+            color: #555;
+        }
+
+        .form-section textarea,
+        .form-section input,
+        .form-section button {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-section textarea {
+            height: 200px;
+        }
+
+        .form-section button {
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-section button:hover {
+            background-color: #74b9ff;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .action-buttons button {
+            width: 150px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link {
+            font-size: 1rem;
+            color: #0984e3;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #74b9ff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .patient-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .form-section textarea,
+            .form-section input,
+            .form-section button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Consultation Notes</h1>
+
+        <!-- Patient Information Section -->
+        <div class="patient-info">
+            <div>
+                <strong>Patient Name:</strong> akshay shah
+            </div>
+            <div>
+                <strong>Age:</strong> 34
+            </div>
+            <div>
+                <strong>Phone:</strong> 8459774405
+            </div>
+        </div>
+
+        <!-- Consultation Notes Form -->
+        <div class="form-section">
+            <h2>Add Consultation Notes</h2>
+            <form action="#" method="POST">
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes" placeholder="Write consultation notes here..." required></textarea>
+
+                <button type="submit">Save Notes</button>
+            </form>
+        </div>
+
+        <!-- Previous Consultation Notes -->
+        <div class="form-section">
+            <h2>Previous Consultation Notes</h2>
+            <div class="notes">
+                <div class="note">
+                    <h3>Consultation - 2024-12-01</h3>
+                    <p><strong>Doctor:</strong> Dr. Priya</p>
+                    <p><strong>Notes:</strong> Patient presented with cold symptoms, advised rest and hydration.</p>
+                </div>
+                <div class="note">
+                    <h3>Consultation - 2024-11-15</h3>
+                    <p><strong>Doctor:</strong> Dr. Raghav</p>
+                    <p><strong>Notes:</strong> Blood pressure high, prescribed medication.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button><a href="doctor_dashboard.html" class="back-link">Back to Dashboard</a></button>
+            <button><a href="bkap.html" class="back-link">Book Appointment</a></button>
+        </div>
+
+       
+    </div>
+
+</body>
+</html>

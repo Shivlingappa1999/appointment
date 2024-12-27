@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="file"],
+        input[type="date"] {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-group img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .form-group input[type="file"] {
+            padding: 5px;
+        }
+
+        button {
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #74b9ff;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .logout-link {
+            font-size: 1rem;
+            color: #e74c3c;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .logout-link:hover {
+            color: #c0392b;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Update Profile</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+          
+            
+            <div class="form-group">
+                <label for="image">Profile Image</label>
+                <!-- Display current profile image or allow the user to upload a new one -->
+                <img src="\Health\Health\static\Images\profile1.jpg" alt="Profile Image" id="profile-image">
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+            
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" value="Akshy Shah" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="number" id="mobile" name="mobile" value="7694523190" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" value="akshayshay@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" value="28" required>
+            </div>
+
+            <button type="submit">Update Profile</button>
+        </form>
+
+        <footer>
+            <a href="patient_dashboard.html" class="logout-link">Back to Dashboard</a>
+        </footer>
+    </div>
+
+</body>
+</html>

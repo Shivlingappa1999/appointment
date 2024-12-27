@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>/* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            min-height: 100vh;
+            background: #f4f6f9;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #0984e3;
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background: #f8f9fa;
+            color: #fff;
+            height: 100vh;
+            padding: 20px;
+        }
+        
+        .sidebar-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .sidebar-menu {
+            list-style-type: none;
+        }
+        
+        .sidebar-menu li {
+            margin: 15px 0;
+        }
+        
+        .sidebar-menu li a {
+            font-size: 1.1rem;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .sidebar-menu li a:hover {
+            background-color: #ffa074;
+            color: #333;
+        }
+        
+        /* Main Content */
+        .content {
+            flex: 1;
+            padding: 30px;
+        }
+        
+        header {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2rem;
+        }
+        
+        header p {
+            color: #777;
+            font-size: 1rem;
+        }
+        
+        /* Appointments Section */
+        .appointments {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .appointments h2 {
+            margin-bottom: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f1f1f1;
+        }
+        
+        .status {
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .status.upcoming {
+            background-color: #74b9ff;
+            color: white;
+        }
+        
+        /* Patient Info Section */
+        .patient-info {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .patient-info button {
+            padding: 10px 20px;
+            background-color: #0984e3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .patient-info button:hover {
+            background-color: #74b9ff;
+        }
+        </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Doctor Dashboard</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="view_appointment.html">View Appointments</a></li>
+            <li><a href="patient_history.html">Patient History</a></li>
+            <li><a href="manage_schedule.html">Manage Schedule</a></li>
+            <li><a href="consultation.html">Consultation Notes</a></li>
+            <li><a href="setting1.html">Settings</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <header>
+            <h1>Welcome, Dr. Priya</h1>
+            <p>Your appointments and tasks</p>
+        </header>
+        <div class="appointments">
+            <h2>Upcoming Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Appointment Date</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Akshay shah</td>
+                        <td>2024-12-28 10:00 AM</td>
+                        <td>General Checkup</td>
+                        <td><span class="status upcoming">Upcoming</span></td>
+                    </tr>
+                    <tr>
+                        <td>Ram gavade</td>
+                        <td>2024-12-28 11:00 AM</td>
+                        <td>Blood Test Review</td>
+                        <td><span class="status upcoming">Upcoming</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="patient-info">
+            <h2>Patient Information</h2>
+            <button>View Patient Records</button>
+        </div>
+    </div>
+</body>
+</html>
